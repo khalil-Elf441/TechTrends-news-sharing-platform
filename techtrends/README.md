@@ -2,6 +2,19 @@
 
 This is a Flask application that lists the latest articles within the cloud-native ecosystem.
 
+```bash
+python -m venv tt-env
+```
+
+```bash
+tt-env\Scripts\activate
+```
+
+```bash
+pip install -r requirements.txt
+```
+
+
 ## Run 
 
 To run this application there are 2 steps required:
