@@ -28,7 +28,7 @@ def get_post(post_id):
 # Define the Flask application
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'your secret key'
-app.debug = True
+# app.debug = True
 
 # Define the main route of the web application 
 @app.route('/')
@@ -108,5 +108,5 @@ def metrics():
 # start the application on port 3111
 if __name__ == "__main__":
     ## stream logs to app.log file
-   #logging.basicConfig(filename='app.log', level=logging.DEBUG)
+   logging.basicConfig(level=logging.DEBUG)
    app.run(host='0.0.0.0', port='3111')

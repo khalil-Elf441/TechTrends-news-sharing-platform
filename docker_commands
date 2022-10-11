@@ -1,11 +1,49 @@
 ## Docker commands used to build the application 
-# TODO: insert the docker build command
+docker build -t techtrends .
 
 ## Docker commands used to run the application
-# TODO: insert the docker run command
+docker run -d --name techtrends -p 7111:3111 techtrends
 
 ## Docker commands used to get the application logs
-# TODO: insert the docker logs command
+docker container logs techtrends
 
 ## Logs from the container running the TechTrends application
-# TODO: paste logs from the Docker container 
+docker container logs techtrends
+
+DEBUG:app:Post 2020 CNCF Annual Report retrieved!
+INFO:werkzeug:172.17.0.1 - - [22/Oct/2022 02:02:31] "GET /1 HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [22/Oct/2022 02:02:31] "GET /static/css/main.css HTTP/1.1" 304 -
+DEBUG:app:Post KubeCon + CloudNativeCon 2021 retrieved!
+INFO:werkzeug:172.17.0.1 - - [22/Oct/2022 02:02:33] "GET /2 HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [22/Oct/2022 02:02:33] "GET /static/css/main.css HTTP/1.1" 304 -
+DEBUG:app:Post Kubernetes v1.20 Release Notes retrieved!
+INFO:werkzeug:172.17.0.1 - - [22/Oct/2022 02:02:35] "GET /3 HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [22/Oct/2022 02:02:35] "GET /static/css/main.css HTTP/1.1" 304 -
+DEBUG:app:Post Kubernetes Certification retrieved!
+INFO:werkzeug:172.17.0.1 - - [22/Oct/2022 02:02:53] "GET /6 HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [22/Oct/2022 02:02:53] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:werkzeug:172.17.0.1 - - [22/Oct/2022 02:03:04] "GET /create HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [22/Oct/2022 02:03:04] "GET /static/css/main.css HTTP/1.1" 304 -
+DEBUG:app:The Post Cloud Native Architecture is created!
+INFO:werkzeug:172.17.0.1 - - [22/Oct/2022 02:03:37] "POST /create HTTP/1.1" 302 -
+INFO:werkzeug:172.17.0.1 - - [22/Oct/2022 02:03:37] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [22/Oct/2022 02:03:37] "GET /static/css/main.css HTTP/1.1" 304 -
+DEBUG:app:Post Cloud Native Architecture retrieved!
+INFO:werkzeug:172.17.0.1 - - [22/Oct/2022 02:03:39] "GET /8 HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [22/Oct/2022 02:03:39] "GET /static/css/main.css HTTP/1.1" 304 -
+DEBUG:app:The About Us page is retrieved!
+INFO:werkzeug:172.17.0.1 - - [22/Oct/2022 02:04:08] "GET /about HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [22/Oct/2022 02:04:08] "GET /static/css/main.css HTTP/1.1" 304 -
+DEBUG:app:The About Us page is retrieved!
+INFO:werkzeug:172.17.0.1 - - [22/Oct/2022 02:04:08] "GET /about HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [22/Oct/2022 02:04:08] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:werkzeug:172.17.0.1 - - [22/Oct/2022 02:04:11] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [22/Oct/2022 02:04:11] "GET /static/css/main.css HTTP/1.1" 304 -
+DEBUG:app:Post 2020 CNCF Annual Report retrieved!
+INFO:werkzeug:172.17.0.1 - - [22/Oct/2022 02:04:13] "GET /1 HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [22/Oct/2022 02:04:13] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:werkzeug:172.17.0.1 - - [22/Oct/2022 02:04:14] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [22/Oct/2022 02:04:14] "GET /static/css/main.css HTTP/1.1" 304 -
+DEBUG:app:The About Us page is retrieved!
+INFO:werkzeug:172.17.0.1 - - [22/Oct/2022 02:04:15] "GET /about HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [22/Oct/2022 02:04:15] "GET /static/css/main.css HTTP/1.1" 304 -

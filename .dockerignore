@@ -1,0 +1,11 @@
+# ignore the venv
+techtrends/tt-env/
+
+.github/
+.vagrant/
+.gitignore
+argocd/
+helm/
+kubernetes/
+screenshots/
+Vagrantfile
