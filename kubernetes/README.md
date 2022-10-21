@@ -1,6 +1,9 @@
-## Kubernetes Declarative Manifests 
+# Kubernetes Declarative Manifests 
 
-# Deploy a Kubernetes cluster
+the Kubernetes declarative manifests in this directory.
+
+
+## Deploy a Kubernetes cluster
 
 ### create a vagrant box using the Vagrantfile in the current directory
 ```bash
@@ -13,13 +16,14 @@ vagrant up
 vagrant ssh
 ```
 
-# k3s Install script
+### k3s Install script
 ```bash
 curl -sfL https://get.k3s.io | sh -
 ```
 ```bash
 sudo su -
 ```
+### Check for Ready node
 ```bash
 k3s kubectl get node 
 ```
@@ -27,8 +31,10 @@ or
 ```bash
 k3s kubectl get no
 ```
-```bash
 
+
+### Create the namespace, deployment and service
+```bash
 kubectl apply -f namespace.yaml
 
 kubectl apply -f service.yaml
@@ -36,8 +42,9 @@ kubectl apply -f service.yaml
 kubectl apply -f deploy.yaml
 ```
 
+### list all resources in the namespace
+
 ```bash
 kubectl get all -n sandbox
 ```
 
-the Kubernetes declarative manifests in this directory.
