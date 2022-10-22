@@ -7,7 +7,8 @@ WORKDIR /app
 COPY /$APP_FOLDER/ /app/
 
 RUN  python -m pip install --upgrade pip && \
-    pip3 install -r requirements.txt
+    pip3 install -r requirements.txt && \
+     python init_db.py
 
 EXPOSE 3111
 
