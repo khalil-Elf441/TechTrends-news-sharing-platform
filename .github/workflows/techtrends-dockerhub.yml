@@ -31,7 +31,7 @@ jobs:
           # list of Docker images to use as base name for tags
           images: |
             ${{ env.DOCKERHUB_REPOSITORY }}/techtrends
-            ghcr.io/username/${{ env.DOCKERHUB_REPOSITORY }}/techtrends
+            ghcr.io/${{ env.DOCKERHUB_REPOSITORY }}/techtrends
           # generate Docker tags based on the following events/attributes
           tags: |
             type=schedule
