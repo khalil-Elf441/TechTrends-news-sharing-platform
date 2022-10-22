@@ -67,21 +67,35 @@ This repository file structure can be found below:
 ```
 
 Where:
+    
+**techtrends/README.md** contains the main steps of how to execute the TechTrends application
 
-    README.md contains the main steps of how to execute the TechTrends application
-    techtrends/__init__.py is a reserved method used to indicate that a directory is a Python package
-    techtrends/app.py contains the main logging of the TechTrends application
-    techtrends/init_db.py is a file that is used to initialize the posts database with a set of articles
-    techtrends/requirements.txt contains a list of packages that need to be installed before running the TechTrends application
-    techtrends/schema.sql outlines the posts database schema
-    techtrends/static/ folder contains the CSS files
-    techtrends/templates/ folder outlines the HTML structure of the TechTrends application
+**techtrends/__init__.py** is a reserved method used to indicate that a directory is a Python package
 
-    argocd -  the ArgoCD manifests
-    helm -  the Helm chart files
-    kubernetes -  Kubernetes declarative manifests
-    screenshots -  all the screenshots that you take throughout the course
-    Vagrantfile - the file containing the configuration for the vagrant box. Will be used to create a vagrant box locally.
-    docker_commands - the file will be used to record any used Docker commands and outputs
+**techtrends/app.py** contains the main logging of the TechTrends application
+
+**techtrends/init_db.py** is a file that is used to initialize the posts database with a set of articles
+
+**techtrends/requirements.txt** contains a list of packages that need to be installed before running the TechTrends application
+
+**techtrends/schema.sql** outlines the posts database schema
+
+**techtrends/static/** folder contains the CSS files
+
+**techtrends/templates/** folder outlines the HTML structure of the TechTrends application
+
+
+**argocd** -  the ArgoCD manifests
+
+**helm** -  the Helm chart files
+
+**kubernetes** -  Kubernetes declarative manifests
+
+**screenshots** -  all the screenshots that you take throughout the course
+
+**Vagrantfile** - the file containing the configuration for the vagrant box. Will be used to create a vagrant box locally.
+
+**docker_commands** - the file will be used to record any used Docker commands and outputs
+
 
 
