@@ -2,14 +2,18 @@
 
 This is a Flask application that lists the latest articles within the cloud-native ecosystem.
 
+
+Create venv for the first use
 ```bash
 python -m venv tt-env
 ```
 
+Avtivate the venv
 ```bash
 tt-env\Scripts\activate
 ```
 
+Install depencides for the first use
 ```bash
 pip install -r requirements.txt
 ```
