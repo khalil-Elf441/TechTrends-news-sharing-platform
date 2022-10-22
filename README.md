@@ -10,6 +10,10 @@ The web application is written using the Python Flask framework. It uses SQLite,
 This repository file structure can be found below:
 
 ```bash
+│   .dockerignore
+│   .gitignore
+│   Dockerfile
+│   docker_commands
 │   README.md
 │   Vagrantfile
 │
