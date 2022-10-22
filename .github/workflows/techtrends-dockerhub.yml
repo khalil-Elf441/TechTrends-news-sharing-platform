@@ -69,7 +69,7 @@ jobs:
         with:
           context: .
           push: ${{ github.event_name != 'pull_request' }}
-          tags: ${{ env.DOCKERHUB_REPOSITORY }}/techtrends:latest, ${{ env.DOCKERHUB_REPOSITORY }}/techtrends:${{GITHUB_SHA:0:7}}
+          tags: ${{ env.DOCKERHUB_REPOSITORY }}/techtrends:latest, ${{ env.DOCKERHUB_REPOSITORY }}/techtrends:${{GITHUB_RUN_ATTEMPT}}
 #          tags: ${{ steps.meta.outputs.tags }}
 
 
