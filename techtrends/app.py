@@ -1,5 +1,6 @@
 import sqlite3
 import logging
+import sys
 
 from flask import Flask, jsonify, json, render_template, request, url_for, redirect, flash
 from werkzeug.exceptions import abort
@@ -11,11 +12,15 @@ from werkzeug.exceptions import abort
 DB_CONNECTION_COUNT= 0
 
 def get_db_connection():
-    global DB_CONNECTION_COUNT
-    DB_CONNECTION_COUNT += 1
-    connection = sqlite3.connect('database.db')
-    connection.row_factory = sqlite3.Row
-    return connection
+    try:
+        connection = sqlite3.connect('database.db')
+        connection.row_factory = sqlite3.Row
+        global DB_CONNECTION_COUNT
+        DB_CONNECTION_COUNT += 1
+        return connection
+    except ValueError:
+        app.logger.debug("Unable to load database file")
+        return None
 
 # Function to get a post using its ID
 def get_post(post_id):
@@ -44,7 +49,7 @@ def index():
 def post(post_id):
     post = get_post(post_id)
     if post is None:
-      app.logger.warning("Post id {post_id} not found.")
+      app.logger.debug(f"Post id {post_id} not found.")
       return render_template('404.html'), 404
     else:
       app.logger.debug(f"Post {post['Title']} retrieved!")
@@ -116,6 +121,7 @@ def metrics():
 
 # start the application on port 3111
 if __name__ == "__main__":
-    ## stream logs to app.log file
-   logging.basicConfig(level=logging.DEBUG)
+    ## stream logs to to STDOUT & STDERR
+   logging.basicConfig(level=logging.DEBUG, handlers=[
+                       logging.StreamHandler(sys.stdout), logging.StreamHandler(sys.stderr)])
    app.run(host='0.0.0.0', port='3111')
